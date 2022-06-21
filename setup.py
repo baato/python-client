@@ -5,7 +5,7 @@ import subprocess
 import sys
 from shutil import rmtree
 
-from setuptools import setup,find_packages, Command
+from setuptools import setup, find_packages, Command
 from baato import config
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -13,7 +13,6 @@ here = os.path.abspath(os.path.dirname(__file__))
 long_description = ""
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as readme:
     long_description = readme.read()
-
 
 
 class BaseCommand(Command):
@@ -38,7 +37,6 @@ class BaseCommand(Command):
             sys.exit(error.returncode)
 
 
-
 class ValidateCommand(BaseCommand):
     """Support setup.py validate."""
 
@@ -55,9 +53,7 @@ class ValidateCommand(BaseCommand):
             [sys.executable, "-m", "pip", "install", "-r", f"{here}/requirements.txt"],
         )
         self._run("Running black ...", [sys.executable, "-m", "black", f"{here}/baato"])
-        self._run(
-            "Running flake8 for legacy packages ...", [sys.executable, "-m", "flake8", f"{here}/baato"]
-        )
+        self._run("Running flake8 for legacy packages ...", [sys.executable, "-m", "flake8", f"{here}/baato"])
 
         self._run(
             "Running unit tests ...",
@@ -67,6 +63,7 @@ class ValidateCommand(BaseCommand):
                 "pytest",
             ],
         )
+
 
 class UploadCommand(BaseCommand):
     """Support setup.py upload."""
@@ -98,10 +95,11 @@ class UploadCommand(BaseCommand):
             [sys.executable, "-m", "twine", "upload", "--repository", "testpypi", "dist/*"],
         )
 
+
 setup(
-    name='baato',
+    name="baato",
     version=config.__version__,
-    description='Baato API for Python',
+    description="Baato API for Python",
     long_description=long_description,
     long_description_content_type="text/markdown",
     classifiers=[
@@ -119,10 +117,10 @@ setup(
         "Programming Language :: Python :: 3.10",
     ],
     keywords=["Baato", "Python", "DRY"],
-    author='Kathmandu Living Labs Consult',
-    author_email='klltech@gmail.com',
-    url='https://github.com/baato/baato-python',
-    license='MIT License',
+    author="Kathmandu Living Labs Consult",
+    author_email="klltech@gmail.com",
+    url="https://github.com/baato/python-client",
+    license="MIT License",
     packages=find_packages(
         exclude=[
             "docs",
@@ -137,8 +135,8 @@ setup(
         "decorator",
         "certifi",
     ],
-    python_requires='>=3.6',
-    setup_requires=['setuptools_scm'],
+    python_requires=">=3.6",
+    setup_requires=["setuptools_scm"],
     cmdclass={
         "validate": ValidateCommand,
         "upload": UploadCommand,

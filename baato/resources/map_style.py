@@ -1,5 +1,8 @@
 import requests
 from ..exceptions import InvalidParams
+import logging
+
+logger = logging.getLogger("__name__")
 
 
 def baato_map_style(*args, **kwargs):
@@ -13,4 +16,4 @@ def baato_map_style(*args, **kwargs):
         res = requests.get(f"{baato_url}styles/{style_name.lower()}?key={access_key}")
         return res
     except requests.exceptions.RequestException as err:
-        print(f"Exception {err}")
+        logger.debug(f"Exception occure in map style API {err}")

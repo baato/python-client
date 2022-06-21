@@ -1,6 +1,8 @@
 import requests
 from ..exceptions import InvalidParams
+import logging
 
+logger = logging.getLogger("__name__")
 
 def baato_places(*args, **kwargs):
     baato_url = kwargs.pop("baseURL")
@@ -13,4 +15,4 @@ def baato_places(*args, **kwargs):
         res = requests.get(f"{baato_url}places?key={access_key}&placeId={placeId}")
         return res
     except requests.exceptions.RequestException as err:
-        print(f"Exception {err}")
+        logger.debug(f"Exception occure in places API {err}")

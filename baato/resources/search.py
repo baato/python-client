@@ -1,5 +1,8 @@
 import requests
 from ..exceptions import InvalidParams
+import logging
+
+logger = logging.getLogger("__name__")
 
 
 def baato_search(*args, **kwargs):
@@ -14,4 +17,4 @@ def baato_search(*args, **kwargs):
         res = requests.get(f"{baato_url}search?key={access_key}&{params}")
         return res
     except requests.exceptions.RequestException as err:
-        print(f"Exception {err}")
+        logger.debug(f"Exception occure in search API {err}")

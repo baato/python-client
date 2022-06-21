@@ -23,7 +23,6 @@ pycodestyle==2.8.0
 pyflakes==2.4.0
 pyparsing==3.0.7
 pytest==7.0.1
-pytest-env==0.6.2
 requests==2.27.1
 six==1.16.0
 toml==0.10.2

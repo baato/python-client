@@ -1,5 +1,8 @@
 import requests
 from ..exceptions import InvalidParams
+import logging
+
+logger = logging.getLogger("__name__")
 
 
 def baato_direction(*args, **kwargs):
@@ -18,4 +21,4 @@ def baato_direction(*args, **kwargs):
         res = requests.get(f"{baato_url}directions?key={access_key}&{params}")
         return res
     except requests.exceptions.RequestException as err:
-        print(f"Exception {err}")
+        logger.debug(f"Exception occure in direction API {err}")
