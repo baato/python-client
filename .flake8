@@ -1,0 +1,26 @@
+[flake8]
+max-line-length = 125
+exclude =
+    __pycache__
+    docs/
+    requirements.txt
+    .coveragerc
+    .gitignore
+    .pypirc
+    LICENSE
+    CHANGELOG.md
+    CONTRIBUTING.md
+    mkdocs.yml
+    tox.ini
+    pyproject.toml
+    pytest.ini
+    README.md
+    media
+    static
+    venv
+    .venv
+    env
+    .env
+    ./env
+    env/
+    .env/
