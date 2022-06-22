@@ -186,3 +186,32 @@ print(response["status"])
 - retro
 """
 ```
+
+## Contributing
+
+[![Baato](https://avatars.githubusercontent.com/u/62283887?s=200&v=4)](https://baato.io/)
+
+### Development Environment
+Fork the repository
+
+Once you have forked this repository to your own GitHub account, install your
+own fork in your development environment:
+
+```bash
+$ git clone git@github.com:<your_fork>/python-client.git
+$ cd python-client
+```
+```bash
+$ pip install -r requirements.txt
+```
+#### Running the tests
+
+Test all supported versions
+You can also use the excellent tox testing tool to run the tests against all supported versions of Python. Install tox, and then simply run:
+```bash
+$ pip install tox
+```
+In the tox.ini file update your `YOUR_BAATO_ACCESS_TOKEN` then.
+```bash
+$ tox
+```
