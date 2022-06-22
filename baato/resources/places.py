@@ -4,6 +4,7 @@ import logging
 
 logger = logging.getLogger("__name__")
 
+
 def baato_places(*args, **kwargs):
     baato_url = kwargs.pop("baseURL")
     access_key = kwargs.pop("access_token")

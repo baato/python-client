@@ -31,6 +31,5 @@ tox==3.25.0
 typed-ast==1.5.4
 typing_extensions==4.1.1
 urllib3==1.26.9
-validators==0.20.0
 virtualenv==20.14.1
 zipp==3.6.0

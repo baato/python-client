@@ -1,3 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# ===============================
+# Author  : Konsta Vesterinen
+
 import re
 import inspect
 import itertools

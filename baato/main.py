@@ -17,10 +17,8 @@ class BaatoApi(object):
         """
         Create API object
         """
-        self.endpoint = self.validate_endpoint(
-            endpoint) if endpoint else __baato_endpoint__
-        self.version = self.validate_version(
-            version) if version else __baato_version__
+        self.endpoint = self.validate_endpoint(endpoint) if endpoint else __baato_endpoint__
+        self.version = self.validate_version(version) if version else __baato_version__
         self.access_token = self.validate_access_token(access_token)
 
         self.baseURL = self.get_baseURL(self.endpoint, self.version)
@@ -36,8 +34,7 @@ class BaatoApi(object):
         if endpoint and url_validator(endpoint):
             return endpoint.rstrip("/")
         else:
-            raise exceptions.InvalidConfig(
-                "Endpoint is Invalid", "Received: %s" % (endpoint))
+            raise exceptions.InvalidConfig("Endpoint is Invalid", "Received: %s" % (endpoint))
 
     @staticmethod
     def validate_version(version):
@@ -45,8 +42,7 @@ class BaatoApi(object):
             "v1",
         ]:
             return version
-        raise exceptions.InvalidConfig(
-            "Version is Invalid", "Received: %s" % (version))
+        raise exceptions.InvalidConfig("Version is Invalid", "Received: %s" % (version))
 
     @staticmethod
     def get_baseURL(endpoint, version):
@@ -66,8 +62,7 @@ class BaatoApi(object):
         Returns:
             json:
         """
-        response = baato_search(
-            access_token=self.access_token, baseURL=self.baseURL, **params)
+        response = baato_search(access_token=self.access_token, baseURL=self.baseURL, **params)
         return response.json()
 
     def reverse(self, *args, **params):
@@ -76,8 +71,7 @@ class BaatoApi(object):
         Returns:
             json:
         """
-        response = baato_reverse_search(
-            access_token=self.access_token, baseURL=self.baseURL, **params)
+        response = baato_reverse_search(access_token=self.access_token, baseURL=self.baseURL, **params)
         return response.json()
 
     def places(self, *args, **params):
@@ -86,8 +80,7 @@ class BaatoApi(object):
         Returns:
             json:
         """
-        response = baato_places(
-            access_token=self.access_token, baseURL=self.baseURL, **params)
+        response = baato_places(access_token=self.access_token, baseURL=self.baseURL, **params)
         return response.json()
 
     def near_by(self, *args, **params):
@@ -96,8 +89,7 @@ class BaatoApi(object):
         Returns:
             json:
         """
-        response = baato_near_by(
-            access_token=self.access_token, baseURL=self.baseURL, **params)
+        response = baato_near_by(access_token=self.access_token, baseURL=self.baseURL, **params)
         return response.json()
 
     def direction(self, *args, **params):
@@ -106,8 +98,7 @@ class BaatoApi(object):
         Returns:
             json:
         """
-        response = baato_direction(
-            access_token=self.access_token, baseURL=self.baseURL, **params)
+        response = baato_direction(access_token=self.access_token, baseURL=self.baseURL, **params)
         return response.json()
 
     def map_style(self, *args, **params):
@@ -116,8 +107,7 @@ class BaatoApi(object):
         Returns:
             json:
         """
-        response = baato_map_style(
-            access_token=self.access_token, baseURL=self.baseURL, **params)
+        response = baato_map_style(access_token=self.access_token, baseURL=self.baseURL, **params)
         return response.json()
 
 
