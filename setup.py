@@ -92,7 +92,7 @@ class UploadCommand(BaseCommand):
         )
         self._run(
             "Uploading the package to PyPI via Twine ...",
-            [sys.executable, "-m", "twine", "upload", "--repository", "testpypi", "dist/*"],
+            [sys.executable, "-m", "twine", "upload", "dist/*"],
         )
 
 

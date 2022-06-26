@@ -1,5 +1,5 @@
 """Check the latest version at https://pypi.org/project/baato/"""
-__version__ = "1.0.12"
+__version__ = "1.0.1"
 __pypi_username__ = "baato"
 __pypi_packagename__ = "baato"
 __github_username__ = "baato"
