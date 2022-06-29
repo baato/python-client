@@ -1,15 +1,16 @@
 # Baato Python Library
+
 ![Build](https://github.com/baato/python-client/actions/workflows/baato_test.yml/badge.svg) ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-The Python library makes it easy to consume the Baato API into existing python projects.
+This Python library makes it easy to consume the [Baato API](https://docs.baato.io) into existing python projects.
 
 baato-python has been tested with:
 
-* **Python**: 3.6, 3.7, 3.8, 3.9, 3.10
-
+- **Python**: 3.6, 3.7, 3.8, 3.9, 3.10
 
 ## Installation
-Baato Python can be installed from PyPI with tools like ``pip``:
+
+Baato Python can be installed from PyPI with tools like `pip`:
 
 ```bash
 $ pip install baato
@@ -17,7 +18,7 @@ $ pip install baato
 
 ## Features
 
-The Baato Python client library makes it easy to integrate the [Baato API](https://baato.io) into existing python projects. This package acts as a wrapper for the following Baato services:
+The Baato Python client library makes it easy to integrate the [Baato API](https://docs.baato.io) into existing python projects. This package acts as a wrapper for the following Baato services:
 
 - [Search API](https://docs.baato.io/#/v1/services/search)
 - [Reverse Search API](https://docs.baato.io/#/v1/services/reverse)
@@ -27,8 +28,11 @@ The Baato Python client library makes it easy to integrate the [Baato API](https
 - [Map Styles API](https://docs.baato.io/#/v1/services/styles)
 
 ## Usage
+
 ### Search API
+
 After initializing Baato with your access token, the `search()` method can be used to make requests to the Search API.
+
 ```python
 from baato import BaatoClient
 
@@ -46,7 +50,7 @@ print(response["status"])
 
 """Optional Search Parameters
 
-- lat and lon =>(float) latitude and longitude coordinates. Useful in mobile applications for providing geographical context to the search. 
+- lat and lon =>(float) latitude and longitude coordinates. Useful in mobile applications for providing geographical context to the search.
 - type =>(str) The type or category of results that the request should return. For example: hospital, cafe etc.
 - radius =>(int)  Radius, in kilometers from the specified lat/lon pair within which to look for results. Only integer values supported. By default the value is set to 10.
 - limit =>(int) The number of results that the request should return. By default the value is set to 5.
@@ -54,7 +58,9 @@ print(response["status"])
 ```
 
 ### Reverse Search API
+
 After initializing Baato with your access token, the `reverse()` method can be used to make requests to the Reverse Search API.
+
 ```python
 from baato import BaatoClient
 
@@ -78,7 +84,9 @@ print(response["status"])
 ```
 
 ### Places API
+
 After initializing Baato with your access token, the `places()` method can be used to make requests to the Places API.
+
 ```python
 from baato import BaatoClient
 
@@ -96,7 +104,9 @@ print(response["status"])
 ```
 
 ### NearbyPlaces API
+
 After initializing Baato with your access token, the `near_by()` method can be used to make requests to the NearbyPlaces API.
+
 ```python
 from baato import BaatoClient
 
@@ -132,8 +142,11 @@ print(response["status"])
 - limit =>(int) The number of results that the request should return. By default the value is set to 5.
 """
 ```
+
 ### Directions API
+
 After initializing Baato with your access token, the `direction()` method can be used to make requests to the Directions API.
+
 ```python
 from baato import BaatoClient
 
@@ -162,7 +175,9 @@ print(response["status"])
 ```
 
 ### Map Styles API
+
 After initializing Baato with your access token, the `map_style()` method can be used to make requests to the Map Styles API.
+
 ```python
 from baato import BaatoClient
 
@@ -193,6 +208,7 @@ print(response["status"])
 [![Baato](https://avatars.githubusercontent.com/u/62283887?s=200&v=4)](https://baato.io/)
 
 ### Development Environment
+
 Fork the repository
 
 Once you have forked this repository to your own GitHub account, install your
@@ -202,17 +218,22 @@ own fork in your development environment:
 $ git clone git@github.com:<your_fork>/python-client.git
 $ cd python-client
 ```
+
 ```bash
 $ pip install -r requirements.txt
 ```
+
 #### Running the tests
 
 Test all supported versions
 You can also use the excellent tox testing tool to run the tests against all supported versions of Python. Install tox, and then simply run:
+
 ```bash
 $ pip install tox
 ```
+
 In the tox.ini file update your `YOUR_BAATO_ACCESS_TOKEN` then.
+
 ```bash
 $ tox
 ```
