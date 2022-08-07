@@ -190,7 +190,7 @@ print(response["status"])
 
 ## Contributing
 
-[![Baato](https://avatars.githubusercontent.com/u/62283887?s=200&v=4)](https://baato.io/)
+[![Baato](https://user-images.githubusercontent.com/24504319/183284839-082b8253-2e75-4487-bcf5-8d1475f2e85f.png)](https://baato.io/)
 
 ### Development Environment
 Fork the repository
@@ -215,4 +215,5 @@ $ pip install tox
 In the tox.ini file update your `YOUR_BAATO_ACCESS_TOKEN` then.
 ```bash
 $ tox
+
 ```
