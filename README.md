@@ -1,5 +1,5 @@
 # Baato Python Library
-![Build](https://github.com/baato/python-client/actions/workflows/baato_test.yml/badge.svg) ![Supported](https://img.shields.io/badge/python-3.6%203.7%203.8%203.9%203.10-blue) ![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Build](https://github.com/baato/python-client/actions/workflows/baato_test.yml/badge.svg) ![Supported](https://img.shields.io/badge/python-3.6%2C%203.7%2C%203.8%2C%203.9%2C%203.10-blue) ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 The Python library makes it easy to consume the Baato API into existing python projects.
 
